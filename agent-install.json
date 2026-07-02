@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "product_id": "marketing",
+  "product_name": "MarketingTasksAI",
+  "official_domain": "marketingtasksai.com",
+  "official_github_repo": "https://github.com/laudoluxDev/marketingtasksai-mcp",
+  "official_package": "@tasksai/install",
+  "installer": {
+    "preferred": "npx",
+    "npx": {
+      "command": "npx",
+      "args": [
+        "@tasksai/install",
+        "marketing",
+        "--source",
+        "https://github.com/laudoluxDev/marketingtasksai-mcp"
+      ],
+      "requires": [
+        "node",
+        "npm",
+        "npx"
+      ]
+    }
+  },
+  "supported_clients": [
+    "claude_desktop",
+    "cursor",
+    "windsurf",
+    "codex"
+  ],
+  "auth": {
+    "method": "browser_device_flow",
+    "connect_url": "https://marketingtasksai.com/connect",
+    "fallback": "license_key"
+  },
+  "security": {
+    "require_domain_verification": true,
+    "require_repo_verification": true,
+    "disallow_arbitrary_manifest_commands": true,
+    "native_installer_user_approval_required": true
+  },
+  "health_check": {
+    "command": "npx",
+    "args": [
+      "@tasksai/install",
+      "marketing",
+      "doctor"
+    ]
+  },
+  "uninstall": {
+    "command": "npx",
+    "args": [
+      "@tasksai/install",
+      "marketing",
+      "uninstall"
+    ]
+  },
+  "support": {
+    "url": "https://marketingtasksai.com/support",
+    "email": "support@marketingtasksai.com"
+  }
+}
